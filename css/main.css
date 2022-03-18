@@ -1,0 +1,7 @@
+@import 'layout.css';
+@import 'styles.css';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
