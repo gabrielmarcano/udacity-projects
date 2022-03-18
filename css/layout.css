@@ -1,6 +1,6 @@
 /* Main sections layout */
 
-.main-header {
+.header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
