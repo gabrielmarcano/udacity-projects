@@ -6,9 +6,10 @@
     align-items: center;
 }
 
-.content {
-    display: grid;
-    grid-template-columns: auto;
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Other layouts */
