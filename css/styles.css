@@ -1,3 +1,14 @@
+/* General styling */
+
+#content, .header-content, .footer-content {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Header styles */
+
 .main-header {
     width: auto;
     box-shadow: 0px -5px 20px 10px rgb(167 167 167 / 20%);
@@ -5,10 +16,6 @@
 
 .header-content {
     min-height: 100px;
-    max-width: 75rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
 }
 
 /* Nav menu style */
@@ -26,16 +33,28 @@
     font-size: 1rem;
 }
 
-main {
+/* Main content styles */
+
+#content {
+    margin-top: 5rem;
     height: 600px;
 }
+
+/* Footer style */
 
 footer {
     background-color: rgb(53, 151, 53);
     height: 250px
 }
 
-h1 {
+/* Text style */
+
+h1.main-title {
     font-size: 3rem;
+}
+
+h2.content-title {
+    padding: 30px 0;
+    font-size: 2rem;
 }
 
