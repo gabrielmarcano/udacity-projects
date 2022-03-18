@@ -1,0 +1,28 @@
+.main-header {
+    min-height: 100px;
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    padding: 0 15px 0 0;
+}
+
+main {
+    background-color: rgb(192, 59, 59);
+}
+
+footer {
+    background-color: rgb(53, 151, 53);
+}
+
+h1 {
+    font-size: 3rem;
+}
+

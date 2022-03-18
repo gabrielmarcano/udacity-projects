@@ -1,0 +1,19 @@
+/* Main sections layout */
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: auto;
+}
+
+/* Other layouts */
+
+.nav-menu ul {
+    display: flex;
+}
+
