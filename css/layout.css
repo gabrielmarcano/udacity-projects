@@ -6,10 +6,12 @@
     align-items: center;
 }
 
-#content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.post-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    grid-gap: 25px;
+    align-items: stretch;
 }
 
 /* Other layouts */
