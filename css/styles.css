@@ -40,10 +40,19 @@
     height: 600px;
 }
 
+/* Cards */
+
+.post-card {
+    background-color: #f3f8fe;
+    box-shadow: 5px 5px 25px 0 rgb(46 61 73 / 20%);
+    padding: 20px;
+}
+
 /* Footer style */
 
 footer {
-    background-color: rgb(53, 151, 53);
+    background-color: black;
+    color: white;
     height: 250px
 }
 
@@ -54,7 +63,8 @@ h1.main-title {
 }
 
 h2.content-title {
-    padding: 30px 0;
+    text-align: center;
+    padding: 30px 0 75px 0;
     font-size: 2rem;
 }
 
