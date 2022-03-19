@@ -22,5 +22,17 @@
     align-items: stretch;
 }
 
+/* Post Page Grid */
+
+#post-content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: minmax(200px, 1fr) auto;
+}
+
+.subscribe {
+    grid-column: 1 / -1;
+}
+
 /* Footer Grid */
 
