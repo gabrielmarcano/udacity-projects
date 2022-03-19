@@ -26,7 +26,6 @@
 
 #post {
     display: grid;
-    grid-template-columns: 3fr 1fr;
     grid-template-rows: 60vh minmax(200px, 1fr) auto;
 }
 
