@@ -24,13 +24,26 @@
 
 /* Post Page Grid */
 
-#post-content {
+#post {
     display: grid;
     grid-template-columns: 3fr 1fr;
-    grid-template-rows: minmax(200px, 1fr) auto;
+    grid-template-rows: 60vh minmax(200px, 1fr) auto;
 }
 
-.subscribe {
+.post-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.related-posts {
     grid-column: 1 / -1;
 }
 
