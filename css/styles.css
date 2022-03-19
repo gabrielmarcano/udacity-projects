@@ -64,14 +64,28 @@
 
 .card-title {
     color: black;
+    text-align: center;
+    padding-bottom: 10px;
 }
 
 .card-description {
     color: black;
+    font-style: italic;
+    padding-bottom: 12px;
 }
 
 .card-button {
     color: black;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    letter-spacing: -1px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-button:hover {
+    color: red;
 }
 
 /* Footer style */
