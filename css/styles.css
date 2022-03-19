@@ -46,6 +46,7 @@
 }
 
 .card-button {
+    font-size: 1rem;
     background: transparent;
     border: none;
 }
@@ -78,6 +79,10 @@
     color: white;
 }
 
+.post-image {
+    width: 100%;
+}
+
 /* Footer style */
 
 footer.main-footer {
@@ -89,7 +94,7 @@ footer.main-footer {
 /* Text style */
 
 h1.main-title {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 h1.main-title a{
@@ -108,4 +113,15 @@ h2.homepage-title {
 
 .post-header, .related-posts, .aside, .post-body {
     color: rgb(0, 0, 0);
+}
+
+@media only screen and (min-width: 768px) {
+
+    h1.main-title {
+        font-size: 3rem;
+    }
+
+    .post-image {
+        width: 600px;
+    }
 }
