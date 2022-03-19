@@ -59,9 +59,28 @@
     color: red;
 }
 
+/* Post style */
+
+#post-content {
+    box-shadow: 5px 5px 25px 0 #2c3a442e;
+}
+
+.post-header {
+    background-image: url('/images/cat-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.3);
+}
+
+.post-title {
+    font-size: 2rem;
+    color: white;
+}
+
 /* Footer style */
 
-footer {
+footer.main-footer {
     background-color: black;
     color: white;
     height: 250px;
@@ -87,14 +106,6 @@ h2.homepage-title {
 
 /* Test styles */
 
-#post, .subscribe {
-    background-color: blue;
-    border: 2px solid rgb(184, 41, 41);
-    color: white;
-}
-
 .post-header, .related-posts, .aside, .post-body {
-    background-color: rgb(24, 201, 127);
-    border: 2px solid rgb(189, 192, 20);
     color: rgb(0, 0, 0);
 }
