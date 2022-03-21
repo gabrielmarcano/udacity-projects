@@ -56,4 +56,16 @@
     justify-content: center;
 }
 
+/* Subscribe Flex */
+
+.subscribe-popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subscribe-form .email{
+    display: inline-block;
+}
+
 /* Footer Grid */
