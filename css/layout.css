@@ -46,5 +46,14 @@
     grid-column: 1 / -1;
 }
 
-/* Footer Grid */
+/* Author grid */
 
+.author {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+/* Footer Grid */
