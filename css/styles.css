@@ -85,7 +85,7 @@
 
 .post-footer {
     width: 100%;
-    background-color: rgba(91, 91, 91, 0.3);
+    background-color: rgb(157 219 209 / 30%);
 }
 
 /* Author */
@@ -101,6 +101,18 @@
 
 .author .author-bio {
     text-align: justify;
+}
+
+/* Social */
+
+.socials {
+    background-color: #75fffc2b;
+}
+
+/* Related Posts */
+
+.related-posts h2 {
+    text-align: center;
 }
 
 /* Footer style */

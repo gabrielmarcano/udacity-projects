@@ -66,6 +66,8 @@
     margin-bottom: 30px;
 }
 
+/* Author */
+
 .author {
     padding: 30px;
 }
@@ -74,6 +76,22 @@
 .author .author-description,
 .author .author-bio {
     margin-bottom: 30px;
+}
+
+/* Socials */
+
+.socials {
+    padding: 20px;
+}
+
+/* Related Posts */
+
+.related-posts {
+    padding: 50px;
+}
+
+.related-posts h2 {
+    padding-bottom: 25px;
 }
 
 /* Text */
