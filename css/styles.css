@@ -24,7 +24,8 @@
 
 .post-card {
     overflow: hidden;
-    background-color: #f3f8fe;
+    /* background-color: #f3f8fe; */
+    background-color: #75fffc2b;
     box-shadow: 5px 5px 25px 0 #2c3a442e;
     border-radius: 0.4rem;
 }
@@ -57,7 +58,7 @@
 }
 
 .card-button a:hover {
-    color: red;
+    color: #9ddbd1;
 }
 
 /* Post style */
