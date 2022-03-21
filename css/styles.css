@@ -75,12 +75,32 @@
 }
 
 .post-title {
-    font-size: 2rem;
+    font-size: 4rem;
     color: white;
 }
 
 .post-image {
     width: 100%;
+}
+
+.post-footer {
+    width: 100%;
+    background-color: rgba(91, 91, 91, 0.3);
+}
+
+/* Author */
+
+.author .author-avatar {
+    height: 200px;
+    border-radius: 50%;
+}
+
+.author .author-description .author-company {
+    color: grey;
+}
+
+.author .author-bio {
+    text-align: justify;
 }
 
 /* Footer style */
@@ -94,7 +114,7 @@ footer.main-footer {
 /* Text style */
 
 h1.main-title {
-    font-size: 2rem;
+    font-size: 1.85rem;
 }
 
 h1.main-title a{
@@ -109,19 +129,33 @@ h2.homepage-title {
     color: black;
 }
 
+#post-content {
+    font-size: 1.5rem;
+}
+
 /* Test styles */
 
 .post-header, .related-posts, .aside, .post-body {
     color: rgb(0, 0, 0);
 }
 
+
+/* desktop only */
 @media only screen and (min-width: 768px) {
 
     h1.main-title {
         font-size: 3rem;
     }
 
+    .post-title {
+        font-size: 2rem;
+    }
+
     .post-image {
         width: 600px;
+    }
+
+    #post-content {
+        font-size: 1rem;
     }
 }
