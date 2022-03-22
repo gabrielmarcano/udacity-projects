@@ -83,7 +83,6 @@
 
 .post-title {
     font-size: 4rem;
-    font-weight: bold;
     color: white;
 }
 
@@ -156,12 +155,6 @@
     border: none;
     border-radius: 2rem;
     cursor: pointer;
-}
-
-/* Footer */
-
-.bottom-footer {
-    text-decoration: underline;
 }
 
 /* Text style */
