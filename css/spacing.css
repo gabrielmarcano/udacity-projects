@@ -21,7 +21,7 @@
 }
 
 .nav-menu ul li {
-    padding: 0 15px 0 0;
+    padding: 0 5px 0 0;
 }
 
 /* Main content */
@@ -99,7 +99,6 @@
 
 .subscribe .subscribe-form button.button-input {
     padding: 15px 25px;
-    margin-left: 10px;
 }
 
 /* Related Posts */
@@ -127,6 +126,10 @@
     padding-bottom: 30px;
 }
 
+.subscribe .subscribe-form input.email-input {
+    margin-right: 0;
+}
+
 /* Text */
 
 h2.homepage-title {
@@ -137,4 +140,16 @@ h2.homepage-title {
 
 .bottom-footer {
     padding: 30px 20px;
+}
+
+/* Tablet media query */
+
+@media only screen and (min-width: 426px) {
+    .subscribe .subscribe-form input.email-input {
+        margin-right: 20px;
+    }
+
+    .nav-menu ul li {
+        padding: 0 15px 0 0;
+    }
 }

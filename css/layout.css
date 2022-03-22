@@ -86,4 +86,15 @@
     display: inline-block;
 }
 
-/* Footer Grid */
+.subscribe .subscribe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Tablet media query */
+
+@media only screen and (min-width: 426px) {
+    .subscribe .subscribe-form {
+        display: block;
+    }
+}
