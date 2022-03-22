@@ -18,6 +18,12 @@
 
 .nav-menu ul li a {
     font-size: 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.nav-menu ul li a:hover {
+    color: #9ddbd1;
 }
 
 /* Cards */
