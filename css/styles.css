@@ -64,7 +64,7 @@
 /* Post style */
 
 #post-content {
-    box-shadow: 5px 5px 25px 0 #2c3a442e;
+    box-shadow: 0px 5px 25px 0 #2c3a442e;
 }
 
 .post-header {
@@ -149,14 +149,6 @@
     border: none;
     border-radius: 2rem;
     cursor: pointer;
-}
-
-/* Footer style */
-
-footer.main-footer {
-    background-color: black;
-    color: white;
-    height: 250px;
 }
 
 /* Text style */
