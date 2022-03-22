@@ -137,6 +137,20 @@
     border-radius: 0.5rem;
 }
 
+.subscribe .subscribe-form input.email-input {
+    background-color: #e5eff8;
+    border: none;
+    border-radius: 2rem;
+}
+
+.subscribe .subscribe-form button.button-input {
+    background-color: #0575e5;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
 /* Footer style */
 
 footer.main-footer {
