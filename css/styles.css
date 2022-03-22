@@ -111,6 +111,14 @@
     background-color: #75fffc2b;
 }
 
+.social-buttons {
+    width: 50%;
+}
+
+.socials .social-buttons ul.social-list {
+    list-style: none;
+}
+
 /* Related Posts */
 
 .related-posts h2 {

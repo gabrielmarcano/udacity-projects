@@ -81,7 +81,15 @@
 /* Socials */
 
 .socials {
-    padding: 20px;
+    padding: 30px;
+}
+
+.socials .social-title {
+    padding-bottom: 50px;
+}
+
+.socials .social-buttons ul.social-list {
+    padding: 0;
 }
 
 /* Related Posts */
