@@ -100,6 +100,15 @@
     padding: 50px;
 }
 
+.subscribe-popup {
+    padding: 40px;
+}
+
+.subscribe-popup .subscribe-title,
+.subscribe-popup .subscribe-description {
+    padding-bottom: 30px;
+}
+
 /* Text */
 
 h2.homepage-title {

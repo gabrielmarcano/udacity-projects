@@ -123,6 +123,12 @@
     background-color: rgb(157 219 209 / 30%);
 }
 
+.subscribe-popup {
+    width: fit-content;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+
 /* Footer style */
 
 footer.main-footer {
