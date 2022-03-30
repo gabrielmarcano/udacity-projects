@@ -23,6 +23,9 @@
  * 
 */
 
+const sections = document.getElementsByTagName('section');
+
+const fragment = document.createDocumentFragment();
 
 /**
  * End Global Variables
