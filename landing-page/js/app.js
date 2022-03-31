@@ -27,6 +27,8 @@ const sections = document.getElementsByTagName('section');
 
 const fragment = document.createDocumentFragment();
 
+const navbar = document.getElementById('navbar__list');
+
 /**
  * End Global Variables
  * Start Helper Functions
@@ -43,8 +45,25 @@ const fragment = document.createDocumentFragment();
 
 // build the nav
 
+for (const section of sections) {
+    const listElement = document.createElement('li');
+
+    const anchorElement = document.createElement('a');
+    anchorElement.classList.add('menu__link');
+
+    anchorElement.innerHTML = `${section.attributes['data-nav'].value}`;
+    anchorElement.setAttribute('href', `#${section.id}`);
+
+    listElement.append(anchorElement);
+    fragment.appendChild(listElement);
+}
+
+navbar.appendChild(fragment);
+
 
 // Add class 'active' to section when near top of viewport
+
+
 
 
 // Scroll to anchor ID using scrollTO event
@@ -61,5 +80,11 @@ const fragment = document.createDocumentFragment();
 // Scroll to section on link click
 
 // Set sections as active
+
+
+
+
+
+
 
 
