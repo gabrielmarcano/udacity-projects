@@ -35,6 +35,14 @@ var navbar = document.getElementById("navbar__list");
  *
  */
 
+function sectionPosition(section) {
+    const sectionRectangle = section.getBoundingClientRect();
+    return {
+        top: sectionRectangle.top + window.scrollY,
+        left: sectionRectangle.left + window.scrollX
+    };
+}
+
 /**
  * End Helper Functions
  * Begin Main Functions
@@ -43,23 +51,22 @@ var navbar = document.getElementById("navbar__list");
 
 // build the nav
 
-function buildNavItems() {
+function buildNavmenu() {
     for (const section of sections) {
         const listElement = document.createElement("li");
-    
+
         const anchorElement = document.createElement("a");
         anchorElement.classList.add("menu__link");
-    
+
         anchorElement.innerHTML = `${section.attributes["data-nav"].value}`;
         anchorElement.setAttribute("href", `#${section.id}`);
-    
+
         listElement.append(anchorElement);
         fragment.appendChild(listElement);
     }
-    
+
     navbar.appendChild(fragment);
 }
-
 
 // Add class 'active' to section when near top of viewport
 
@@ -67,11 +74,11 @@ function isActive() {
     for (const section of sections) {
         const sectionBoundary = section.getBoundingClientRect();
         if (sectionBoundary.top <= 100 && sectionBoundary.bottom >= 100) {
-            section.classList.add('active');
-            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.add('active-link');
+            section.classList.add("active");
+            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.add("active-link");
         } else {
-            section.classList.remove('active');
-            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.remove('active-link');
+            section.classList.remove("active");
+            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.remove("active-link");
         }
     }
 }
@@ -79,17 +86,20 @@ function isActive() {
 // Scroll to anchor ID using scrollTO event
 
 function scrollToSection(event) {
-    if (event.target.tagName == 'A') {
-        let box = document.querySelector(event.target.getAttribute('href')).getBoundingClientRect();
-        console.log(box);
-        window.scrollTo({top: box.top, left: box.left, behavior: "smooth"});
-    }
-}
+    event.preventDefault();
 
-function example(event) {
-    if (event.target.tagName == 'A') {
-        console.log(event.target.getAttribute('href'));
+    if (event.target.tagName == "A") {
+        const section = document.querySelector(event.target.getAttribute("href"));
 
+        const position = sectionPosition(section);
+
+        const headerHeight = document.querySelector('.page__header').offsetHeight;
+
+        window.scrollTo({
+            top: position.top - headerHeight,
+            left: position.left,
+            behavior: "smooth",
+        });
     }
 }
 
@@ -101,12 +111,12 @@ function example(event) {
 
 // Build menu
 
-document.addEventListener('DOMContentLoaded', buildNavItems);
+document.addEventListener("DOMContentLoaded", buildNavmenu);
 
 // Scroll to section on link click
 
-navbar.addEventListener('click', scrollToSection);
+navbar.addEventListener("click", scrollToSection);
 
 // Set sections as active
 
-document.addEventListener('scroll', isActive);
+document.addEventListener("scroll", isActive);
