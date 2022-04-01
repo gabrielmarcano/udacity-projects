@@ -78,6 +78,21 @@ function isActive() {
 
 // Scroll to anchor ID using scrollTO event
 
+function scrollToSection(event) {
+    if (event.target.tagName == 'A') {
+        let box = document.querySelector(event.target.getAttribute('href')).getBoundingClientRect();
+        console.log(box);
+        window.scrollTo({top: box.top, left: box.left, behavior: "smooth"});
+    }
+}
+
+function example(event) {
+    if (event.target.tagName == 'A') {
+        console.log(event.target.getAttribute('href'));
+
+    }
+}
+
 /**
  * End Main Functions
  * Begin Events
@@ -86,7 +101,11 @@ function isActive() {
 
 // Build menu
 
+document.addEventListener('DOMContentLoaded', buildNavItems);
+
 // Scroll to section on link click
+
+navbar.addEventListener('click', scrollToSection);
 
 // Set sections as active
 
