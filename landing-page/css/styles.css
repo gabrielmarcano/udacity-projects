@@ -90,6 +90,7 @@ section {
 
 .navbar__menu .menu__link.active__link {
     background: rgb(10, 92, 168);
+    color: #fff;
 } 
 
 /* Header Styles */
