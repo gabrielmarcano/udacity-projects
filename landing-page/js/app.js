@@ -75,10 +75,10 @@ function isActive() {
         const sectionBoundary = section.getBoundingClientRect();
         if (sectionBoundary.top <= 100 && sectionBoundary.bottom >= 100) {
             section.classList.add("active");
-            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.add("active-link");
+            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.add("active__link");
         } else {
             section.classList.remove("active");
-            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.remove("active-link");
+            document.querySelector(`.menu__link[href="#${section.id}"]`).classList.remove("active__link");
         }
     }
 }
