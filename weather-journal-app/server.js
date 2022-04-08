@@ -28,3 +28,8 @@ function feedback() {
     console.log(`Server running on localhost: ${port}`);
 }
 const server = app.listen(port, feedback);
+
+// GET Route To Return Endpoint Data
+app.get('/data', (request, response) => {
+    response.send(projectData);
+})
