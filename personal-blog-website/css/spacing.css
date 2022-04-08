@@ -1,0 +1,155 @@
+/* General spacing */
+
+#homepage-content,
+#post-content,
+.header-content,
+.bottom-footer {
+    max-width: 75rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+/* Header */
+
+
+
+/* Nav menu */
+
+.nav-menu ul {
+    padding: 0;
+}
+
+.nav-menu ul li {
+    padding: 0 5px 0 0;
+}
+
+/* Main content */
+
+#homepage-content {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+}
+
+#post-content {
+    padding: 0;
+}
+
+/* Post Cards */
+
+.card-body {
+    padding: 15px 20px;
+}
+
+.card-title {
+    padding-bottom: 10px;
+}
+
+.card-description {
+    padding-bottom: 12px;
+}
+
+.card-button {
+    padding: 0;
+}
+
+/* Post */
+
+.post-body {
+    margin-top: 50px;
+    padding: 0 30px;
+}
+
+.post-body p,
+.post-body blockquote,
+.post-body figure {
+    margin-bottom: 30px;
+}
+
+/* Author */
+
+.author {
+    padding: 30px;
+}
+
+.author .author-avatar,
+.author .author-description,
+.author .author-bio {
+    margin-bottom: 30px;
+}
+
+/* Socials */
+
+.socials {
+    padding: 30px;
+}
+
+.socials .social-title {
+    padding-bottom: 50px;
+}
+
+.socials .social-buttons ul.social-list {
+    padding: 0;
+}
+
+.subscribe .subscribe-form input.email-input {
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+.subscribe .subscribe-form button.button-input {
+    padding: 15px 25px;
+}
+
+/* Related Posts */
+
+.related-posts {
+    padding: 50px;
+}
+
+.related-posts h2 {
+    padding-bottom: 25px;
+}
+
+/* Subscribe */
+
+.subscribe {
+    padding: 50px;
+}
+
+.subscribe-popup {
+    padding: 40px;
+}
+
+.subscribe-popup .subscribe-title,
+.subscribe-popup .subscribe-description {
+    padding-bottom: 30px;
+}
+
+.subscribe .subscribe-form input.email-input {
+    margin-right: 0;
+}
+
+/* Text */
+
+h2.homepage-title {
+    padding: 30px 0 75px 0;
+}
+
+/* Footer */
+
+.bottom-footer {
+    padding: 30px 20px;
+}
+
+/* Tablet media query */
+
+@media only screen and (min-width: 426px) {
+    .subscribe .subscribe-form input.email-input {
+        margin-right: 20px;
+    }
+
+    .nav-menu ul li {
+        padding: 0 15px 0 0;
+    }
+}
