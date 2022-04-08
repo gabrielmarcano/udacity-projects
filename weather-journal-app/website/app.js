@@ -1,5 +1,5 @@
 // Personal API Key for OpenWeatherMap API
-const apiKey = 'secret&units=imperial';
+const apiKey = 'f029632a333bf5bdf8b4795dd060bc0f&units=imperial';
 
 /* Global Variables */
 
