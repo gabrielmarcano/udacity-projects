@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+projectData = [];
 
 // Require Express to run server and routes
 const express = require('express');
@@ -33,3 +33,10 @@ const server = app.listen(port, feedback);
 app.get('/data', (request, response) => {
     response.send(projectData);
 })
+
+// POST Route To Add Data to projectData
+app.post('/add', (request, response) => {
+    projectData.push(request.body);
+    console.log(projectData);
+})
+
