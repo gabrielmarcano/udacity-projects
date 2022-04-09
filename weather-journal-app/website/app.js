@@ -1,11 +1,17 @@
+/* Global Variables */
+
 // Personal API Key for OpenWeatherMap API
 const apiKey = "f029632a333bf5bdf8b4795dd060bc0f&units=imperial";
 
-/* Global Variables */
+// Generate Button
+const button = document.getElementById("generate");
 
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
+
+
+/* Functions */
 
 // Asynchronously fetch the data from the app endpoint
 async function getData(url = "") {
@@ -39,11 +45,6 @@ const postData = async (url = "", data = {}) => {
     }
 };
 
-// Update UI function
-async function updateUI() {
-    console.log("UI Updated");
-}
-
 // Weather API action function
 async function callWeatherApi(city, key) {
     const geo = await getData(
@@ -59,7 +60,21 @@ async function callWeatherApi(city, key) {
         );
 
         return data;
+    } catch (error) {
+        console.log("Error: ", error);
+    }
+}
 
+// Update UI function
+async function updateUI() {
+    const request = await fetch('/data');
+    try {
+        const data = await request.json();
+
+        document.getElementById("date").innerHTML = newDate;
+        document.getElementById("temp").innerHTML = data[0].temperature;
+        document.getElementById("content").innerHTML = data[0].content;
+        
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -73,10 +88,9 @@ async function generate() {
     callWeatherApi(cityName, apiKey)
         .then(function (data) {
             const allData = {
-                city: data.name,
+                zone: data.name,
                 temperature: data.main.temp,
-                weather: data.weather[0].description,
-                response: feeling
+                content: feeling,
             };
 
             postData("/add", allData);
@@ -84,7 +98,5 @@ async function generate() {
         .then(updateUI());
 }
 
-
 // Add event listener to button
-const button = document.getElementById('generate');
-button.addEventListener('click', generate);
+button.addEventListener("click", generate);
