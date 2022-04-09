@@ -54,20 +54,12 @@ async function callWeatherApi(city, key) {
         const lat = await geo[0].lat;
         const lon = await geo[0].lon;
 
-        getData(
+        const data = await getData(
             `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
-        )
-            .then(function (data) {
-                const allData = {
-                    city: data.name,
-                    temperature: data.main.temp,
-                    weather: data.weather[0].description,
-                    response: "textarea text",
-                };
+        );
 
-                postData("/add", allData);
-            })
-            .then(updateUI());
+        return data;
+
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -75,5 +67,24 @@ async function callWeatherApi(city, key) {
 
 // Perform action function
 async function generate() {
+    const cityName = document.getElementById("city").value;
+    const feeling = document.getElementById("feelings").value;
 
+    callWeatherApi(cityName, apiKey)
+        .then(function (data) {
+            const allData = {
+                city: data.name,
+                temperature: data.main.temp,
+                weather: data.weather[0].description,
+                response: feeling
+            };
+
+            postData("/add", allData);
+        })
+        .then(updateUI());
 }
+
+
+// Add event listener to button
+const button = document.getElementById('generate');
+button.addEventListener('click', generate);
