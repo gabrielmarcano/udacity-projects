@@ -13,7 +13,7 @@ let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
 
 /* Functions */
 
-// Asynchronously fetch the data from the app endpoint
+// GET Function. Asynchronously fetch the data from the app endpoint
 async function getData(url = "") {
     const response = await fetch(url);
     try {
@@ -71,10 +71,10 @@ async function updateUI() {
     try {
         const data = await request.json();
 
-        document.getElementById("date").innerHTML = newDate;
-        document.getElementById("temp").innerHTML = data[0].temperature;
-        document.getElementById("content").innerHTML = data[0].content;
-        
+        document.getElementById("date").innerHTML = 'Date: ' + newDate;
+        document.getElementById("temp").innerHTML = 'Temperature: ' + Math.round(data[0].temperature) + ' degrees';
+        document.getElementById("content").innerHTML = 'Commentary: ' + data[0].content;
+
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -93,9 +93,9 @@ async function generate() {
                 content: feeling,
             };
 
-            postData("/add", allData);
+            postData("/add", allData)
+            .then(updateUI());
         })
-        .then(updateUI());
 }
 
 // Add event listener to button
