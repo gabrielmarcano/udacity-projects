@@ -78,17 +78,22 @@ const generate = async () => {
     const zipCode = document.getElementById("zip").value;
     const feeling = document.getElementById("feelings").value;
     
-    callWeatherApi(zipCode, apiKey)
-        .then(function (data) {
-            const allData = {
-                zone: data.name,
-                temperature: data.main.temp,
-                content: feeling,
-            };
-    
-            postData("/add", allData)
-                .then(updateUI());
-        })
+    // Check if the zip code is 5 characters long, and those characters are numbers
+    if (zipCode.length === 5 && zipCode.match(/\d+/g)[0].length === 5) {
+        callWeatherApi(zipCode, apiKey)
+            .then(function (data) {
+                const allData = {
+                    zone: data.name,
+                    temperature: data.main.temp,
+                    content: feeling,
+                };
+        
+                postData("/add", allData)
+                    .then(updateUI());
+            })
+    } else {
+        console.log('Zip code must be 5 digits long');
+    }
 }
 
 // Add event listener to button
