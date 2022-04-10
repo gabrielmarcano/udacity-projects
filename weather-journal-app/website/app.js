@@ -14,7 +14,7 @@ let newDate = d.getMonth()+1 + "/" + d.getDate() + "/" + d.getFullYear();
 /* Functions */
 
 // GET Function. Asynchronously fetch the data from the app endpoint
-async function getData(url = "") {
+const getData = async (url = "") => {
     const response = await fetch(url);
     try {
         const data = await response.json();
@@ -46,11 +46,11 @@ const postData = async (url = "", data = {}) => {
 };
 
 // Weather API action function
-async function callWeatherApi(zip, key) {
+const callWeatherApi = async (zip, key) => {
     const response = await getData(
         `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${key}&units=imperial`
     );
-
+    
     try {
         return response;
     } catch (error) {
@@ -59,7 +59,7 @@ async function callWeatherApi(zip, key) {
 }
 
 // Update UI function
-async function updateUI() {
+const updateUI = async () => {
     const request = await fetch('/data');
     try {
         const data = await request.json();
@@ -74,10 +74,10 @@ async function updateUI() {
 }
 
 // Perform action function
-async function generate() {
+const generate = async () => {
     const zipCode = document.getElementById("zip").value;
     const feeling = document.getElementById("feelings").value;
-
+    
     callWeatherApi(zipCode, apiKey)
         .then(function (data) {
             const allData = {
@@ -85,7 +85,7 @@ async function generate() {
                 temperature: data.main.temp,
                 content: feeling,
             };
-
+    
             postData("/add", allData)
                 .then(updateUI());
         })
