@@ -8,7 +8,7 @@ const button = document.getElementById("generate");
 
 // Create a new date instance dynamically with JS
 let d = new Date();
-let newDate = d.getMonth() + "." + d.getDate() + "." + d.getFullYear();
+let newDate = d.getMonth() + "/" + d.getDate() + "/" + d.getFullYear();
 
 
 /* Functions */
@@ -66,7 +66,7 @@ async function updateUI() {
 
         document.getElementById("date").innerHTML = 'Date: ' + newDate;
         document.getElementById("temp").innerHTML = 'Temperature: ' + Math.round(data[0].temperature) + ' degrees';
-        document.getElementById("content").innerHTML = 'Commentary: ' + data[0].content;
+        document.getElementById("content").innerHTML = 'Feeling: ' + data[0].content;
 
     } catch (error) {
         console.log("Error: ", error);
@@ -87,7 +87,7 @@ async function generate() {
             };
 
             postData("/add", allData)
-            .then(updateUI());
+                .then(updateUI());
         })
 }
 
