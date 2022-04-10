@@ -46,20 +46,13 @@ const postData = async (url = "", data = {}) => {
 };
 
 // Weather API action function
-async function callWeatherApi(city, key) {
-    const geo = await getData(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${key}&units=imperial`
+async function callWeatherApi(zip, key) {
+    const response = await getData(
+        `https://api.openweathermap.org/data/2.5/weather?zip=${zip}&appid=${key}&units=imperial`
     );
 
     try {
-        const lat = await geo[0].lat;
-        const lon = await geo[0].lon;
-
-        const data = await getData(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}`
-        );
-
-        return data;
+        return response;
     } catch (error) {
         console.log("Error: ", error);
     }
@@ -82,10 +75,10 @@ async function updateUI() {
 
 // Perform action function
 async function generate() {
-    const cityName = document.getElementById("city").value;
+    const zipCode = document.getElementById("zip").value;
     const feeling = document.getElementById("feelings").value;
 
-    callWeatherApi(cityName, apiKey)
+    callWeatherApi(zipCode, apiKey)
         .then(function (data) {
             const allData = {
                 zone: data.name,
